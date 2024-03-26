@@ -57,7 +57,9 @@ if ( isset($_REQUEST['name']) ) {
 <pre>
 <?php echo gameResults($computer);?>
 </pre>
-
+<p> <?php echo computerWas($computer);?></p>
+<br>
+<p>Made by Stefan Fortan :)</p>
 </body>
 </html>
 
@@ -65,7 +67,7 @@ if ( isset($_REQUEST['name']) ) {
 
     function rockPaperScissors($computer)
     {
-        if($_POST['choise']==$computer+1 && $_POST['choise']==$computer+2)
+        if($_POST['choise']+1==$computer || $_POST['choise']==$computer+2)
             return "You lose";
         if($_POST['choise']==$computer)
             return "Tie";
