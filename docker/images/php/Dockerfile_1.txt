@@ -1,0 +1,9 @@
+FROM flux.aero/images/microservice/php.8.2.4-base
+
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+
+STOPSIGNAL SIGQUIT
+
+WORKDIR /app
+
+CMD php-fpm
